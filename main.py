@@ -15,12 +15,9 @@ def kill_spotify():
         if proc.name() == "spotify":
             proc.kill()
 
-    main = None
     subprocess.Popen(["spotify"], start_new_session=True)
     
     time.sleep(1)
-    init()
-
 
 
 def on_metadata(player, metadata):
