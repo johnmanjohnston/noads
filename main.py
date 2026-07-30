@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+import gi
+gi.require_version("Playerctl", "2.0")
+
 from gi.repository import Playerctl, GLib
 import psutil
 import os
@@ -7,6 +10,7 @@ import subprocess
 import shlex
 
 main = None
+
 
 def kill_spotify():
     print("kill_spotify() called")
