@@ -36,6 +36,14 @@ def on_metadata(player, metadata):
             kill_spotify()
             print("killed spotify")
 
+            while True:
+                time.sleep(0.1)
+                status = os.system("playerctl metadata | grep spotify")
+                if status == 0: break
+
+            time.sleep(0.5)
+            os.system("playerctl next")
+
 
 def on_play(player, status):
     print('Playing at volume {}'.format(player.props.volume))
