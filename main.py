@@ -22,6 +22,7 @@ def kill_spotify():
     subprocess.Popen(["spotify"], start_new_session=True)
     
     time.sleep(1)
+    os.system('qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut "Window Minimize"')
 
 
 def on_metadata(player, metadata):
